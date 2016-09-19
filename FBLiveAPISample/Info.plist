@@ -30,9 +30,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>Put your facebook app id</string>
+	<string>Put your fb app id</string>
 	<key>FacebookDisplayName</key>
-	<string>Put your facebook app name</string>
+	<string>Put your fb display name</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -48,9 +48,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>TEST</string>
+	<string>Facebook Live API Sample</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>TEST</string>
+	<string>Facebook Live API Sample</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

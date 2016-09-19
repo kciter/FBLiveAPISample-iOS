@@ -13,7 +13,7 @@ enum FBLivePrivacy: StringLiteralType {
     case everyone = "EVERYONE"
     case allFriends = "ALL_FRIENDS"
     case friendsOfFriends = "FRIENDS_OF_FRIENDS"
-    case custom = "CUSTOM"
+//    case custom = "CUSTOM"
 }
 
 class FBLiveAPI {

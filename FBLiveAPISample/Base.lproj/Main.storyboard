@@ -18,33 +18,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-aW-GCz">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPt-8H-QaX">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="4" maxX="10" maxY="4"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="Live">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="live" destination="BYZ-38-t0r" eventType="touchUpInside" id="vES-aq-ubl"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vL-iV-oK2">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-0u-rdf">
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xzm-q1-E39">
+                                        <segments>
+                                            <segment title="Self"/>
+                                            <segment title="Everyone"/>
+                                            <segment title="All friends"/>
+                                            <segment title="Friends of friends" width="120"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changeLivePrivacyWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="hIv-V2-eQh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Xzm-q1-E39" firstAttribute="top" secondItem="zPa-0u-rdf" secondAttribute="bottom" constant="8" id="AC4-Ee-wHh"/>
+                                    <constraint firstItem="zPa-0u-rdf" firstAttribute="leading" secondItem="2vL-iV-oK2" secondAttribute="leading" constant="10" id="CwC-n6-70X"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xzm-q1-E39" secondAttribute="trailing" constant="10" id="N1S-7n-mYP"/>
+                                    <constraint firstItem="Xzm-q1-E39" firstAttribute="leading" secondItem="2vL-iV-oK2" secondAttribute="leading" constant="10" id="dbV-OL-87Z"/>
+                                    <constraint firstAttribute="height" constant="80" id="fqb-R2-ObL"/>
+                                    <constraint firstItem="zPa-0u-rdf" firstAttribute="top" secondItem="2vL-iV-oK2" secondAttribute="top" constant="10" id="oe1-IA-4XL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mPt-8H-QaX" secondAttribute="bottom" constant="20" id="Omy-kG-XYS"/>
+                            <constraint firstAttribute="bottom" secondItem="2vL-iV-oK2" secondAttribute="bottom" id="GPs-pz-sDA"/>
+                            <constraint firstAttribute="trailing" secondItem="2vL-iV-oK2" secondAttribute="trailing" id="OCy-6U-7ql"/>
                             <constraint firstItem="ooE-aW-GCz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Rvc-YE-ZBB"/>
+                            <constraint firstItem="2vL-iV-oK2" firstAttribute="top" secondItem="mPt-8H-QaX" secondAttribute="bottom" constant="20" id="UOz-j2-ish"/>
                             <constraint firstItem="mPt-8H-QaX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yoj-gM-PSp"/>
                             <constraint firstItem="ooE-aW-GCz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hI2-Ok-UuG"/>
+                            <constraint firstItem="2vL-iV-oK2" firstAttribute="top" secondItem="ooE-aW-GCz" secondAttribute="bottom" id="pLg-Yg-eEr"/>
+                            <constraint firstItem="2vL-iV-oK2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rJg-6A-qNL"/>
                             <constraint firstAttribute="trailing" secondItem="ooE-aW-GCz" secondAttribute="trailing" id="yRT-oG-GMP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ooE-aW-GCz" secondAttribute="bottom" id="zhF-TD-7uB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="ooE-aW-GCz" id="zsU-MR-mx3"/>
                         <outlet property="liveButton" destination="mPt-8H-QaX" id="igO-Tm-Bi6"/>
+                        <outlet property="livePrivacyControl" destination="Xzm-q1-E39" id="n5x-x7-S0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
