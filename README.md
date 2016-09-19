@@ -1,12 +1,13 @@
 <h1 align="center">FBLiveAPISample for iOS</h1>
-<div align="center">
-<a href="https://travis-ci.org/kciter/FBLiveAPISample-iOS"><img src="https://travis-ci.org/kciter/FBLiveAPISample-iOS.svg?branch=master"></a>
-</div>
 
 <div align="center">
 <img src="https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/preview3.jpeg?raw=true" width='30%'>
 <img src="https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/preview2.jpeg?raw=true" width='30%'>
 <img src="https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/preview1.jpeg?raw=true" width='30%'>
+</div>
+
+<div align="center">
+<a href="https://travis-ci.org/kciter/FBLiveAPISample-iOS"><img src="https://travis-ci.org/kciter/FBLiveAPISample-iOS.svg?branch=master"></a>
 </div>
 
 <div align="center">
@@ -27,17 +28,25 @@
 * FBSDKLoginKit
 
 ## How to Run?
-1. Clone this repository
+1. First, create your Facebook app. [Link](https://developers.facebook.com/)
+2. Clone this repository
 
     ```
     $ git clone https://github.com/kciter/FBLiveAPISample-iOS
     ```
-2. Open `FBLiveAPISample.xcworkspace`.
-3. Open `Info.plist` as Property List.
-4. Put your `FacebookAppId` and `FacebookDisplayName` value.
+3. Open `FBLiveAPISample.xcworkspace`.
+4. Open `Info.plist` as Property List.
+5. Put your `FacebookAppId` and `FacebookDisplayName` value.
   <img src='https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/info.png?raw=true'>
+6. [Here](https://developers.facebook.com/docs/videos/live-video) for more Facebook Live API Information.
   
-  
+## How see the comments and reactions?
+Graph API can make 200 calls per hour per user in aggregate. So I recommend setup your web server, then receiving API updates via facebook webhooks. And send data to client via websocket.
+
+> You can read live video comments by polling the [Video Comment edge](https://developers.facebook.com/docs/graph-api/reference/video/comments/). In order to do this in the most efficient way so as not to exceed Graph API [rate limits](https://developers.facebook.com/docs/graph-api/advanced/rate-limiting), we recommend receiving API updates via webhooks. You can also read live video reactions by polling the [Reactions edge](https://developers.facebook.com/docs/graph-api/reference/live-video/reactions/).
+
+[Here](https://developers.facebook.com/docs/videos/live-video/production-broadcasts#comments) for more information.
+
 ## License
 The MIT License (MIT)
 
