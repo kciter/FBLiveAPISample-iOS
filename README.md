@@ -42,7 +42,7 @@
 5. Put your `FacebookAppId` and `FacebookDisplayName` value.
   <img src='https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/info.png?raw=true'>
 
-6. [Here](https://developers.facebook.com/docs/videos/live-video) for more Facebook Live API Information.
+[Here](https://developers.facebook.com/docs/videos/live-video) for more Facebook Live API Information.
   
 ## How see the comments and reactions?
 Graph API can make 200 calls per hour per user in aggregate. So I recommend setup your web server, then receiving API updates via facebook webhooks. And send data to client via websocket.
