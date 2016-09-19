@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-<a href="https://travis-ci.org/kciter/FBLiveAPISample-iOS"><img src="https://travis-ci.org/kciter/FBLiveAPISample-iOS.svg?branch=master"></a>
+<a href="https://travis-ci.org/kciter/FBLiveAPISample-iOS"><img src="https://travis-ci.org/kciter/FBLiveAPISample-iOS.svg?branch=master"></a><br>
 </div>
 
 <div align="center">
@@ -29,15 +29,19 @@
 
 ## How to Run?
 1. First, create your Facebook app. [Link](https://developers.facebook.com/)
+
 2. Clone this repository
 
     ```
     $ git clone https://github.com/kciter/FBLiveAPISample-iOS
     ```
 3. Open `FBLiveAPISample.xcworkspace`.
+
 4. Open `Info.plist` as Property List.
+
 5. Put your `FacebookAppId` and `FacebookDisplayName` value.
   <img src='https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/info.png?raw=true'>
+
 6. [Here](https://developers.facebook.com/docs/videos/live-video) for more Facebook Live API Information.
   
 ## How see the comments and reactions?
