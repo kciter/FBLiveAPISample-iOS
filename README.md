@@ -44,7 +44,7 @@
 
 [Here](https://developers.facebook.com/docs/videos/live-video) for more Facebook Live API Information.
   
-## How see the comments and reactions?
+## How to see the comments and reactions?
 Graph API can make 200 calls per hour per user in aggregate. So I recommend setup your web server, then receiving API updates via facebook webhooks. And send data to client via websocket.
 
 > You can read live video comments by polling the [Video Comment edge](https://developers.facebook.com/docs/graph-api/reference/video/comments/). In order to do this in the most efficient way so as not to exceed Graph API [rate limits](https://developers.facebook.com/docs/graph-api/advanced/rate-limiting), we recommend receiving API updates via webhooks. You can also read live video reactions by polling the [Reactions edge](https://developers.facebook.com/docs/graph-api/reference/live-video/reactions/).
