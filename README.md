@@ -42,6 +42,9 @@
 5. Put your `FacebookAppId` and `FacebookDisplayName` value.
   <img src='https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/info.png?raw=true'>
 
+6. Connect!<br>
+  <img src="https://github.com/kciter/FBLiveAPISample-iOS/blob/master/Images/live.png?raw=true" width='50%'>
+
 [Here](https://developers.facebook.com/docs/videos/live-video) for more Facebook Live API Information.
   
 ## How to see the comments and reactions?
