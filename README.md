@@ -20,7 +20,7 @@
 ## Requirements
 * Swift 3
 * Xcode 8
-* Cocoapods 1.0.1
+* CocoaPods 1.0.1
 
 ## Dependencies
 * VideoCore
